@@ -1,0 +1,12 @@
+<table class="table">
+    <thead>
+        <th>Log Server</th>
+        <th>Okay</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="logserver in logservers">
+            <td><a href="#logserver/{{logserver.id}}">{{logserver.name}}</a></td>
+            <td>{{logserver.good}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+<h1>{{logserver.name}}</h1>
+
+<dl class="dl-horizontal">
+    <dt>Log ID</dt>
+    <dd>{{logserver.logId}}
+
+    <dt>URL</dt>
+    <dd><a href="https://{{logserver.urlPrefix}}/ct/v1/get-sth">https://{{logserver.urlPrefix}}/ct/v1</a></dd>
+
+    <dt>Maximum Merge Delay</dt>
+    <dd>{{logserver.maximumMergeDelay}}
+
+    <dt>Announcement URL</dt>
+    <dd><a href="{{logserver.announceUrl}}">{{logserver.announceUrl}}</a></dd>
+</dl>
+
+<h2>Bad</h2>
+
+<table class="table">
+    <thead>
+        <th>Timestamp</th>
+        <th>Signature</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sth in logserver.sth.bad">
+            <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
+            <td>{{sth.signature}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Good</h3>
+<table class="table">
+    <thead>
+        <th>Timestamp</th>
+        <th>Signature</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="sth in logserver.sth.good">
+            <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
+            <td>{{sth.signature}}</td>
+        </tr>
+    </tbody>
+</table>
