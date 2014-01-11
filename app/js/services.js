@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('myApp.services', [])
-    .factory('logservers', function() {
+    .factory('logservers', function($http) {
         return {
             all : function() {
                 return [
@@ -23,28 +23,7 @@ angular.module('myApp.services', [])
                 ];
             },
             lookupSthForLogServer: function(logserver) {
-                switch (logserver.id) {
-                    case "google-pilot":
-                        return {
-                            good: [
-                                { timestamp: moment(1318781876406), signature: 456},
-                                { timestamp: moment(1318781899999), signature: 457}
-                            ],
-                            bad: [
-                                { timestamp: moment(1234), signature: 45}
-                            ]
-                        };
-                    case "google-aviator":
-                        return {
-                            good: [
-                                { timestamp: moment(1318781876406), signature: 456},
-                                { timestamp: moment(1318781899999), signature: 457}
-                            ],
-                            bad: [
-                                { timestamp: moment(1234), signature: 45}
-                            ]
-                        };
-                }
+                return $http.get('//api.ct-watch.tom-fitzhenry.me.uk/logserver/' + logserver.id)
             }
 
         }
