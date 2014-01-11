@@ -19,12 +19,16 @@
 <table class="table">
     <thead>
         <th>Timestamp</th>
+        <th>Tree Size</th>
+        <th>Root Hash</th>
         <th>Signature</th>
     </thead>
     <tbody>
         <tr ng-repeat="sth in logserver.sth.bad">
             <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
-            <td>{{sth.signature}}</td>
+            <td>{{sth.treesize}}</td>
+            <td>{{sth.roothash}}</td>
+            <td>{{sth.treeheadsignature}}</td>
         </tr>
     </tbody>
 </table>
@@ -33,12 +37,16 @@
 <table class="table">
     <thead>
         <th>Timestamp</th>
+        <th>Tree Size</th>
+        <th>Root Hash</th>
         <th>Signature</th>
     </thead>
     <tbody>
         <tr ng-repeat="sth in logserver.sth.good">
             <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
-            <td>{{sth.signature}}</td>
+            <td>{{sth.treesize}}</td>
+            <td>{{sth.roothash}}</td>
+            <td>{{sth.treeheadsignature}}</td>
         </tr>
     </tbody>
 </table>
