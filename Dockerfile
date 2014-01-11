@@ -10,4 +10,4 @@ WORKDIR /src
 
 EXPOSE 80
 
-CMD nodejs /src/scripts/web-server.js 80
+CMD cd app; nodejs ../scripts/web-server.js 80
