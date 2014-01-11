@@ -8,4 +8,6 @@ RUN apt-get install -y nodejs
 ADD . /src
 WORKDIR /src
 
-CMD nodejs /src/scripts/web-server.js
+EXPOSE 80
+
+CMD nodejs /src/scripts/web-server.js 80
