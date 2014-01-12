@@ -12,5 +12,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/logservers.html', controller: 'LogServersCtrl'});
   $routeProvider.when('/logserver/:id', {templateUrl: 'partials/logserver.html', controller: 'LogServerCtrl'});
+  $routeProvider.when('/contact', {templateUrl: 'partials/contact.html'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
