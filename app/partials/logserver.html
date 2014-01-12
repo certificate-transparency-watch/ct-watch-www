@@ -25,7 +25,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="sth in logserver.sth.bad">
-            <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
+            <td>{{sth.timestamp.utc().format("YYYY-MM-DD HH:mm:ss")}}Z</td>
             <td>{{sth.treesize}}</td>
             <td>{{sth.roothash}}</td>
             <td>{{sth.treeheadsignature}}</td>
@@ -43,7 +43,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="sth in logserver.sth.good">
-            <td>{{sth.timestamp.utc().format("YYYY-MM-DD hh:mm:ss")}}Z</td>
+            <td>{{sth.timestamp.utc().format("YYYY-MM-DD HH:mm:ss")}}Z</td>
             <td>{{sth.treesize}}</td>
             <td>{{sth.roothash}}</td>
             <td>{{sth.treeheadsignature}}</td>
