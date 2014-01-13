@@ -8,10 +8,14 @@ angular.module('myApp.controllers', []).
 
       logservers.lookupSthForLogServer($scope.logserver).then(function(results) {
           $scope.logserver.sth = _.transform(results.data, function(accum, goodOrBadSet, k) {
-	      accum[k] = _.map(goodOrBadSet, function(el) {
-                  el.timestamp = moment(parseInt(el.timestamp,10));
-                  return el;
-	      });
+	      accum[k] = _.chain(goodOrBadSet)
+				.map(function(el) {
+				  el.timestamp = moment(parseInt(el.timestamp,10));
+				  return el;
+				})
+				.sortBy('timestamp')
+				.reverse()
+				.value()
 	  });
       });
   }])
