@@ -6,6 +6,20 @@
     <p>Certificate Transparency Watch is a CT auditor: it follows all CT log servers and checks they are behaving correctly.</p>
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">View certificates for your domain</div>
+    <div class="panel-body">
+        <form class="form-inline" ng-controller="ViewCertificateCtrl" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="domain" placeholder="Enter domain">
+            </div>
+            <button type="submit" ng-click="submit()" class="btn btn-default">View certificates</button>
+        </form>
+    </div>
+</div>
+
+
+
 <table class="table">
     <thead>
         <th>Log Server</th>

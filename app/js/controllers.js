@@ -21,4 +21,9 @@ angular.module('myApp.controllers', []).
   }])
   .controller('LogServersCtrl', ['$scope', 'logservers', function($scope, logservers) {
       $scope.logservers = logservers.all();
-  }]);
+  }])
+  .controller('ViewCertificateCtrl', function($scope) {
+      $scope.submit = function() {
+          window.location = "http://api.ct-watch.tom-fitzhenry.me.uk/domain/" + $scope.domain;
+      };
+  });
