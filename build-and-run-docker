@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+docker build -t=ct-watch-www .
+docker stop service-ct-watch-www || true
+docker rm service-ct-watch-www || true
+docker run -d -p 8081:80 --name=service-ct-watch-www ct-watch-www
