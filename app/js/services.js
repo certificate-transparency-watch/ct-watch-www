@@ -19,6 +19,13 @@ angular.module('myApp.services', [])
                         logId: "aPaY+B9kgr46jO65KB1M/HFRXWeT1ETRCmesu09P+8Q=",
                         announceUrl: "https://groups.google.com/forum/?fromgroups#!topic/certificate-transparency/I9czVN5LWps",
                         good: true
+                    },
+                    {
+                        id: "alpha.ctlogs.org",
+                        name: "alpha.ctlogs.org",
+                        urlPrefix: "alpha.ctlogs.org",
+                        announceUrl: "https://groups.google.com/forum/#!topic/certificate-transparency/uRemlJKb284",
+                        good: true
                     }
                 ];
             },
