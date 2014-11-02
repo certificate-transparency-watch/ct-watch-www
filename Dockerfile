@@ -1,7 +1,7 @@
-FROM ubuntu:12.10
+FROM ubuntu:14.04
 MAINTAINER tom@tom-fitzhenry.me.uk
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y nodejs
 
