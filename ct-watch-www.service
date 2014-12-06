@@ -1,0 +1,14 @@
+[Unit]
+Description=ct-watch-www
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=on-failure
+RestartSec=10
+ExecStartPre=-/usr/bin/docker rm service-ct-watch-www
+ExecStart=/usr/bin/docker run -p 8081:80 --name=service-ct-watch-www ct-watch-www
+ExecStop=/usr/bin/docker stop -t 2 service-ct-watch-www
+
+[Install]
+WantedBy=local.target
