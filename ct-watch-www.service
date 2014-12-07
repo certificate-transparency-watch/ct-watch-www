@@ -11,4 +11,4 @@ ExecStart=/usr/bin/docker run -p 8081:80 --name=service-ct-watch-www ct-watch-ww
 ExecStop=/usr/bin/docker stop -t 2 service-ct-watch-www
 
 [Install]
-WantedBy=local.target
+WantedBy=multi-user.target
