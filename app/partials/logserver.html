@@ -27,8 +27,8 @@
         <tr ng-repeat="sth in logserver.sth.bad">
             <td>{{sth.timestamp.utc().format("YYYY-MM-DD HH:mm:ss")}}Z</td>
             <td>{{sth.treesize}}</td>
-            <td>{{sth.roothash}}</td>
-            <td>{{sth.treeheadsignature}}</td>
+            <td>{{sth.rootHash}}</td>
+            <td>{{sth.treeHeadSignature}}</td>
         </tr>
     </tbody>
 </table>
