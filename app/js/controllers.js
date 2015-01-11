@@ -24,6 +24,6 @@ angular.module('myApp.controllers', []).
   }])
   .controller('ViewCertificateCtrl', function($scope) {
       $scope.submit = function() {
-          window.location = "http://api.ct-watch.tom-fitzhenry.me.uk/domain/" + $scope.domain;
+          window.location = "http://api.ctwatch.net/domain/" + $scope.domain;
       };
   });

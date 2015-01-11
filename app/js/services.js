@@ -55,7 +55,7 @@ angular.module('myApp.services', [])
                 ];
             },
             lookupSthForLogServer: function(logserver) {
-                return $http.get('//api.ct-watch.tom-fitzhenry.me.uk/logserver/' + logserver.id)
+                return $http.get('//api.ctwatch.net/logserver/' + logserver.id)
             }
 
         }
