@@ -9,6 +9,7 @@ angular.module('myApp.services', [])
                         id: "google-pilot",
                         name: "Google Pilot",
                         urlPrefix: "ct.googleapis.com/pilot",
+                        logId: "pLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BA=",
                         announceUrl: "https://www.imperialviolet.org/2013/08/01/ctpilot.html",
                         good: true
                     },
