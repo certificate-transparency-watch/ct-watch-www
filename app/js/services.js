@@ -52,6 +52,22 @@ angular.module('myApp.services', [])
                         logId: "zbUXm3/BwEb+6jETaj+PAC5hgvr4iW/syLL1tatgSQA=",
                         announceUrl: "http://www.certificate-transparency.org/known-logs",
                         good: true
+                    },
+                    {
+                        id: "ct.ws.symantec.com",
+                        name: "ct.ws.symantec.com",
+                        urlPrefix: "ct.ws.symantec.com",
+                        logId: "3esdK3oNT6Ygi4GtgWhwfi6OnQHVXIiNPRHEzbbsvsw=",
+                        announceUrl: "https://code.google.com/p/chromium/issues/detail?id=483625",
+                        good: true
+                    },
+                    {
+                        id: "ctlog.api.venafi.com",
+                        name: "ctlog.api.venafi.com",
+                        urlPrefix: "ctlog.api.venafi.com",
+                        logId: "rDua7X+pZ0dXFZ5tfVdWcvnZgQCUHpve/+yhMTt1eC0=",
+                        announceUrl: "https://code.google.com/p/chromium/issues/detail?id=499446",
+                        good: true
                     }
                 ];
             },
