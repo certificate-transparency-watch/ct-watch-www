@@ -3,13 +3,10 @@ node_js:
 - 0.8
 
 script:
-- docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www .
-  
-before_deploy:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
-
-deploy: docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www
-
+- docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www .
+- docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www
+  
 env:
   global:
     secure: U2hgfzF6ocYZej7ak8iDsXlf6MuAC5uHz2/mPmdPI1IuoL0wFFJM1J4m30N2DGrw2wutWGYPPTpP8h4DyUMjWq+scMoTemVhVykvO09Y/3jUAIEIF/LL6y5ZcDgjAUzKqKcUHtJE11sC82wgP+bDkblAcdKtJrfDjMGKqjlcpu4=
