@@ -1,4 +1,8 @@
 language: generic
+sudo: required
+
+services:
+  - docker
 
 script:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
