@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - 0.8
-
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - npm install --quiet -g karma
-  - ./scripts/web-server.js > /dev/null &
-  - sleep 1 # give server time to start
+- 0.8
 
 script:
-  - karma start config/karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
-  - karma start config/karma-e2e.conf.js --reporters=dots --browsers=Firefox
+- docker build -t certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www .
+  
+deploy:
+- docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
+- docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www
+
+env:
+  global:
+    secure: U2hgfzF6ocYZej7ak8iDsXlf6MuAC5uHz2/mPmdPI1IuoL0wFFJM1J4m30N2DGrw2wutWGYPPTpP8h4DyUMjWq+scMoTemVhVykvO09Y/3jUAIEIF/LL6y5ZcDgjAUzKqKcUHtJE11sC82wgP+bDkblAcdKtJrfDjMGKqjlcpu4=
