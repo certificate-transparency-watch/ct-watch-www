@@ -1,6 +1,4 @@
-language: node_js
-node_js:
-- 0.8
+language: generic
 
 script:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
