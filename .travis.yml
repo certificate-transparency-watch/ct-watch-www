@@ -8,8 +8,7 @@ script:
 before_deploy:
 - docker login -u tomfitzhenry -p $BINTRAY_API_KEY -e tom@tom-fitzhenry.me.uk certificate-transparency-watch-docker-ct-watch-registry.bintray.io
 
-deploy:
-- docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www
+deploy: docker push certificate-transparency-watch-docker-ct-watch-registry.bintray.io/ct-watch-www
 
 env:
   global:
